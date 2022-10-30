@@ -1,16 +1,22 @@
 <template>
   <div class="home">
-    <burger-menu/>
-    <div class="home__left"></div>
+    <burger-menu />
+    <div class="home__left">
+      <my-button
+      :button="{ title: 'dssfdsf', color: 'accent', disabled: false}"
+      ></my-button>
+    </div>
     <div class="home__right"></div>
   </div>
 </template>
 
 <script>
-import BurgerMenu from '@/widgets/';
+import MyButton from "@/shared/";
+import BurgerMenu from "@/widgets/";
 export default {
   components: {
     BurgerMenu,
+    MyButton,
   },
 };
 </script>

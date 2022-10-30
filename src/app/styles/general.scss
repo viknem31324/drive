@@ -1,0 +1,13 @@
+.wrapper {
+  max-width: 1440px;
+  display: flex;
+  border: 1px solid black;
+  margin: 0 auto;
+  height: 818px;
+}
+
+body {
+    font-family: "Roboto-Light";
+    font-style: normal;
+    color: var(--main-black);
+}

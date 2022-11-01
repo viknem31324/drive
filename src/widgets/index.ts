@@ -1,3 +1,4 @@
 import BurgerMenu from './burger-menu';
 import HeaderBlock from './header';
-export {BurgerMenu, HeaderBlock};
+import FooterBlock from './footer';
+export {BurgerMenu, HeaderBlock, FooterBlock};

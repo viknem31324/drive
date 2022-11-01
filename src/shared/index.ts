@@ -1,2 +1,2 @@
-import MyButton from './ui/index';
-export default MyButton;
+import {MyButton, MyLogo} from './ui/index';
+export {MyButton, MyLogo};

@@ -2,6 +2,9 @@
   <div class="home">
     <burger-menu />
     <div class="home__left">
+      <my-logo>
+        Need for drive
+      </my-logo>
       <my-button 
         class="home__btn"
         :theme="'btn-green'"
@@ -14,7 +17,8 @@
 </template>
 
 <script>
-import MyButton from "@/shared/";
+import {MyButton} from "@/shared/";
+import {MyLogo} from "@/shared/";
 import BurgerMenu from "@/widgets/";
 export default {
   data() {
@@ -24,6 +28,7 @@ export default {
   components: {
     BurgerMenu,
     MyButton,
+    MyLogo
   },
   methods: {
     overOrder() {

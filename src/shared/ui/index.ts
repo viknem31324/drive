@@ -1,2 +1,3 @@
 import MyButton from './button/MyButton.vue';
-export default MyButton;
+import MyLogo from './logo/MyLogo.vue';
+export {MyButton, MyLogo};

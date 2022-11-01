@@ -1,0 +1,9 @@
+.logo {
+  &__link {
+    font-family: "Roboto-Bold";
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 35px;
+    color: var(--main-accent);
+  }
+}

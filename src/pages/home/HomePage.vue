@@ -2,9 +2,7 @@
   <div class="home">
     <burger-menu />
     <div class="home__left">
-      <my-logo>
-        Need for drive
-      </my-logo>
+      <header-block></header-block>
       <my-button 
         class="home__btn"
         :theme="'btn-green'"
@@ -16,24 +14,24 @@
   </div>
 </template>
 
-<script>
-import {MyButton} from "@/shared/";
-import {MyLogo} from "@/shared/";
-import BurgerMenu from "@/widgets/";
-export default {
+<script lang="ts">
+import { defineComponent } from "vue";
+import {MyButton} from "../../shared";
+import {BurgerMenu, HeaderBlock} from "../../widgets";
+export default defineComponent({
   data() {
     return {
     }
   },
   components: {
+    HeaderBlock,
     BurgerMenu,
     MyButton,
-    MyLogo
   },
   methods: {
-    overOrder() {
+    overOrder(): void {
       console.log('click')
     }
   }
-};
+});
 </script>

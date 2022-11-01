@@ -1,2 +1,3 @@
 import BurgerMenu from './burger-menu';
-export default BurgerMenu;
+import HeaderBlock from './header';
+export {BurgerMenu, HeaderBlock};

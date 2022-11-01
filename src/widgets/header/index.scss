@@ -1,0 +1,29 @@
+.header {
+  padding-top: 30px;
+  padding-left: 61px;
+  padding-right: 62px;
+  display: flex;
+  justify-content: space-between;
+
+  .geo-location {
+    position: relative;
+    padding-left: 29px;
+    padding-top: 8px;
+    font-family: 'Roboto-Regular';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--main-grey);
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 6px;
+      width: 26px;
+      height: 26px;
+      background-image: url('@/app/assets/img/header/geolock.svg');
+      background-repeat: no-repeat;
+    }
+  }
+}

@@ -1,2 +1,2 @@
-import MyButton from './button/ui';
+import MyButton from './ui/index';
 export default MyButton;

@@ -1,0 +1,55 @@
+.btn {
+  padding-top: 15px;
+  padding-bottom: 11px;
+
+  font-family: "Roboto-Medium";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  border-radius: 8px;
+  background-blend-mode: darken;
+
+  cursor: pointer;
+  transition: all 3s linear 3s;
+
+  &:disabled {
+    background: var(--main-light);
+    color: var(--white);
+  }
+}
+
+.btn-green {
+  color: var(--white);
+  background: linear-gradient(90deg, #0ec261 2.61%, #039f67 112.6%);
+  transition: all 3s linear 3s;
+
+  &:hover {
+    background: linear-gradient(90deg, #0b934a 2.61%, #026e47 112.6%);
+  }
+
+  &:active {
+    background: linear-gradient(90deg, #076432 2.61%, #013c27 112.6%);
+  }
+
+  &:focus {
+    background: linear-gradient(90deg, #0b934a 2.61%, #026e47 112.6%);
+  }
+}
+
+.btn-blue {
+  color: var(--white);
+  background: linear-gradient(90deg, #132949 0%, #0c7b67 100%);
+  transition: all 0.5s ease-out;
+
+  &:hover {
+    background: linear-gradient(90deg, #132949 2.61%, #132949 112.6%);
+  }
+
+  &:active {
+    background: linear-gradient(90deg, #0c7b67 2.61%, #0c7b67 112.6%);
+  }
+
+  &:focus {
+    background: linear-gradient(90deg, #0c7b67 2.61%, #0c7b67 112.6%);
+  }
+}

@@ -4,12 +4,14 @@
     <div class="home__left">
       <header-block></header-block>
       <div class="home__content">
+        <h1 class="home__title">Каршеринг <br><span>Need for drive</span></h1>
+        <div class="home__descr">Поминутная аренда авто твоего города</div>
       <my-button 
         class="home__btn"
         :theme="'btn-green'"
         :disabled="false"
         :onClick="overOrder"
-      >Ghbdtn</my-button>
+      >Забронировать</my-button>
     </div>
       <footer-block></footer-block>
     </div>

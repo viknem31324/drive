@@ -10,7 +10,7 @@
   background-blend-mode: darken;
 
   cursor: pointer;
-  transition: all 3s linear 3s;
+  // transition: all 3s linear 3s;
 
   &:disabled {
     background: var(--main-light);
@@ -21,7 +21,7 @@
 .btn-green {
   color: var(--white);
   background: linear-gradient(90deg, #0ec261 2.61%, #039f67 112.6%);
-  transition: all 3s linear 3s;
+  // transition: all 3s linear 3s;
 
   &:hover {
     background: linear-gradient(90deg, #0b934a 2.61%, #026e47 112.6%);

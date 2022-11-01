@@ -12,14 +12,38 @@
   }
 
   &__content {
+    padding-left: 61px;
     flex: 1 0 auto;
   }
 
-  &__btn {
-    padding-left: 100px;
-    padding-right: 100px;
+  &__title {
+    padding-top: 168px;
+    font-family: "Roboto-Bold";
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 66px;
+    color: var(--main-black);
+
+    span {
+      display: inline-block;
+      padding-top: 4px;
+      color: var(--main-accent);
+    }
   }
-  
+
+  &__descr {
+    padding-top: 26px;
+    font-size: 26px;
+    line-height: 30px;
+    color: var(--main-grey);
+  }
+
+  &__btn {
+    padding-left: 60px;
+    padding-right: 59px;
+    margin-top: 60px;
+  }
+
   &__right {
     flex: 0 1 50%;
     border: 1px solid black;

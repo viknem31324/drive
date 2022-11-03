@@ -3,7 +3,7 @@
     <h2 class="slide__title">{{ slide.title }}</h2>
     <div class="slide__descr"> {{ slide.descr }}</div>
     <my-button class="slide__btn"
-        :theme="'btn-green'"
+        :theme="slide.btnTheme"
         :disabled="false"
         :onClick="overOrder"
         >Подробнее</my-button>

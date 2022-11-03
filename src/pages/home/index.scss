@@ -8,7 +8,6 @@
     display: flex;
     flex-direction: column;
     flex: 1 1 50%;
-    // border: 1px solid black;
   }
 
   &__content {
@@ -45,12 +44,7 @@
   }
 
   &__right {
-    max-width: 688px;
-    flex: 0 0 688px;
-    // border: 1px solid black;
+    flex: 0 1 50%;
   }
 
-  .my-slider {
-    height: 100%;
-  }
 }

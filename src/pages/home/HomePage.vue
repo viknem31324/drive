@@ -24,6 +24,7 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import {MyButton} from "../../shared";
+
 import {BurgerMenu, HeaderBlock, FooterBlock, MySlider} from "../../widgets";
 export default defineComponent({
   data() {

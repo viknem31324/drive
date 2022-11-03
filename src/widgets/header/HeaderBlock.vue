@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <my-logo>
+    <my-logo class="header__logo">
       Need for drive
     </my-logo>
     <slot></slot>

@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <burger-menu />
+    <burger-menu class="home__burger"/>
     <div class="home__left">
       <header-block></header-block>
       <main class="home__content">

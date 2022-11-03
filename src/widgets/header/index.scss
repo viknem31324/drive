@@ -1,11 +1,29 @@
 .header {
+  @include mobile {
+    padding-top: 16px;
+    padding-right: 16px;
+    padding-left: 0px;
+    justify-content: end;
+    flex-wrap: wrap;
+  }
+
   padding-top: 30px;
   padding-left: 61px;
   padding-right: 62px;
   display: flex;
   justify-content: space-between;
 
+  &__logo {
+    @include mobile {
+      padding-left: 50px;
+    }
+  }
+
   .geo-location {
+    @include mobile {
+      padding-top: 11px;
+    }
+
     position: relative;
     padding-left: 29px;
     padding-top: 8px;

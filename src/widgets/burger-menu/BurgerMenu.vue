@@ -15,17 +15,17 @@
         <ul class="burger__list-icon list-icon">
           <li class="list-icon__item">
             <a href="https://web.telegram.org/">
-              <img src="../../app/assets/img/burger/free-icon-telegram-3536661.png" alt="Telegram">
+              <img src="@/shared/assets/img/burger/free-icon-telegram-3536661.png" alt="Telegram">
             </a>
           </li>
           <li class="list-icon__item">
             <a href="https://www.facebook.com/">
-              <img src="../../app/assets/img/burger/free-icon-facebook-174848.png" alt="Facebook">
+              <img src="@/shared/assets/img/burger/free-icon-facebook-174848.png" alt="Facebook">
             </a>
           </li>
           <li class="list-icon__item">
             <a href="https://www.instagram.com/">
-              <img src="../../app/assets/img/burger/free-icon-instagram-1409946.png" alt="Instagram">
+              <img src="@/shared/assets/img/burger/free-icon-instagram-1409946.png" alt="Instagram">
             </a>
           </li>
         </ul>

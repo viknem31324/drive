@@ -5641,7 +5641,7 @@ svgo@^2.7.0:
     picocolors "^1.0.0"
     stable "^0.1.8"
 
-swiper-vue2@^1.0.10:
+swiper-vue2@1.0.10:
   version "1.0.10"
   resolved "https://registry.yarnpkg.com/swiper-vue2/-/swiper-vue2-1.0.10.tgz#edfe31440e4e58a74785866b62dd6e52c578d2aa"
   integrity sha512-eFO1SFJMGzD8nKmT1PHkmUf+IaZUqghIuE3wR7ecqb3cRkTOW/+fQhndjgnJo5Wo4+fUIfsSbl1a9bNeui2ahg==

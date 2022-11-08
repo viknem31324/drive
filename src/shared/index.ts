@@ -1,2 +1,2 @@
-import {MyButton, MyLogo} from './ui/index';
+import {MyButton, MyLogo} from './ui';
 export {MyButton, MyLogo};

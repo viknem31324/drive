@@ -11,7 +11,7 @@
 <script>
 import { Pagination, Mousewheel, Navigation } from "swiper";
 import { SwiperCore, Swiper, SwiperSlide } from "swiper-vue2";
-import { SlideComponent } from "../../entities";
+import { SlideComponent } from "@/entities";
 
 import "swiper/swiper-bundle.css";
 

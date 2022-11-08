@@ -5,9 +5,9 @@
     <my-button class="slide__btn"
         :theme="slide.btnTheme"
         :disabled="false"
-        :onClick="overOrder"
+        :overOrder="overOrder"
         >Подробнее</my-button>
-    <img class="slide__img" :src="require(`@/app/assets/img/${slide.img}`)" :alt="'Слайд ' + slide.id">
+    <img class="slide__img" :src="require(`@/shared/assets/img/${slide.img}`)" :alt="'Слайд ' + slide.id">
   </div>
 </template>
 
@@ -29,8 +29,8 @@ export default {
     MyButton
   },
   methods: {
-    overOrder: {
-
+    overOrder(){
+      console.log(111111)
     }
   }
 }

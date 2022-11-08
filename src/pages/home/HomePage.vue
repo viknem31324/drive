@@ -10,7 +10,7 @@
         class="home__btn"
         :theme="'btn-green'"
         :disabled="false"
-        :onClick="overOrder"
+        :overOrder="overOrder"
       >Забронировать</my-button>
     </main>
       <footer-block></footer-block>

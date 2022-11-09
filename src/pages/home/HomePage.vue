@@ -1,31 +1,31 @@
 <template>
   <div class="home">
-    <burger-menu class="home__burger"/>
+    <BurgerMenu class="home__burger" />
     <div class="home__left">
-      <header-block></header-block>
+      <HeaderBlock></HeaderBlock>
       <main class="home__content">
         <h1 class="home__title">Каршеринг <br><span>Need for drive</span></h1>
         <div class="home__descr">Поминутная аренда авто твоего города</div>
-      <my-button 
-        class="home__btn"
-        :theme="'btn-green'"
-        :disabled="false"
-        :overOrder="overOrder"
-      >Забронировать</my-button>
-    </main>
-      <footer-block></footer-block>
+        <MyButton class="home__btn" :theme="'btn-green'" @click.native="overOrder()">Забронировать
+        </MyButton>
+      </main>
+      <FooterBlock></FooterBlock>
     </div>
     <div class="home__right">
-      <my-slider></my-slider>
+      <MySlider></MySlider>
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import {MyButton} from "../../shared";
 
-import {BurgerMenu, HeaderBlock, FooterBlock, MySlider} from "../../widgets";
+import MyButton from "@/shared/ui/button/MyButton.vue";
+import BurgerMenu from "@/widgets/burger-menu/BurgerMenu.vue";
+import HeaderBlock from "@/widgets/header/HeaderBlock.vue";
+import FooterBlock from "@/widgets/footer/FooterBlock.vue";
+import MySlider from "@/widgets/slider/MySlider.vue";
+
 export default defineComponent({
   data() {
     return {

@@ -2,12 +2,11 @@
   <div class="slide">
     <h2 class="slide__title">{{ slide.title }}</h2>
     <div class="slide__descr"> {{ slide.descr }}</div>
-    <my-button class="slide__btn"
+    <MyButton class="slide__btn"
         :theme="slide.btnTheme"
-        :disabled="false"
-        :overOrder="overOrder"
-        >Подробнее</my-button>
-    <img class="slide__img" :src="require(`@/shared/assets/img/${slide.img}`)" :alt="'Слайд ' + slide.id">
+        @click.native="overOrder()"
+        >Подробнее</MyButton>
+    <img class="slide__img" :src="require(`@/shared/assets/img/${slide.img}`)" :alt="`Слайд ${slide.id}`">
   </div>
 </template>
 

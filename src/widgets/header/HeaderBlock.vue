@@ -1,8 +1,8 @@
 <template>
   <header class="header">
-    <my-logo class="header__logo">
+    <MyLogo class="header__logo">
       Need for drive
-    </my-logo>
+    </MyLogo>
     <div class="geo-location">Ульяновск</div>
   </header>
 </template>

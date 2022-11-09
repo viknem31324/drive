@@ -1,12 +1,12 @@
 <template>
-  <swiper class="my-slider" slidesPerView="auto" :pagination="{ clickable: true }" mousewheel navigation :loop="true">
-    <swiper-slide v-for="slide in slideArr" :key="slide.id" >
-      <slide-component :slide="slide"></slide-component>
-    </swiper-slide>
+  <Swiper class="my-slider" slidesPerView="auto" :pagination="{ clickable: true }" mousewheel navigation :loop="true">
+    <SwiperSlide v-for="slide in slideArr" :key="slide.id" >
+      <SlideComponent :slide="slide"></SlideComponent>
+    </SwiperSlide>
       <div class="swiper-pagination" slot="pagination"></div>
       <div class="swiper-button-prev" slot="button-prev"></div>
       <div class="swiper-button-next" slot="button-next"></div>
-  </swiper>
+  </Swiper>
 </template>
 <script>
 import { Pagination, Mousewheel, Navigation } from "swiper";

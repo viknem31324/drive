@@ -1,11 +1,11 @@
 <template>
-  <button class="btn" @click="overOrder()" :class="[activeBg]" :disabled="disabled">
+  <button class="btn" :class="[activeBg]" :disabled="disabled">
     <slot>Кнопка</slot>
   </button>
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType} from "vue";
+import { defineComponent} from "vue";
 
 export default defineComponent({
   data() {
@@ -24,10 +24,6 @@ export default defineComponent({
       type: Boolean,
       default: false
     },
-    overOrder: {
-      type: Function as PropType<() => void>,
-      required: true
-    }
   },
   computed: {
     activeBg(): string {

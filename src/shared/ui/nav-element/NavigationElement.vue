@@ -1,7 +1,7 @@
 <template>
   <nav class="nav">
     <ul class="nav__list-link list-link">
-      <li v-for="item in arrs" :key="item.id">
+      <li v-for="item in getNavArr" :key="item.id">
         <router-link class="list-link__item" :to="`${item.link}`">{{ item.name}}</router-link>
       </li>
     </ul>
@@ -9,17 +9,15 @@
 </template>
 <script>
 import { defineComponent } from 'vue';
+import {mapGetters} from 'vuex';
 
 export default defineComponent({
   data() {
     return {
-      arrs: [
-        {name: 'Парковка', link: '/', id: 1},
-        {name: 'Страховка', link: '/', id: 2},
-        {name: 'Бензин', link: '/', id: 3},
-        {name: 'Обслуживание', link: '/', id: 4},
-      ]
     }
+  },
+  computed: {
+    ...mapGetters(["getNavArr"]),
   }
 
 })

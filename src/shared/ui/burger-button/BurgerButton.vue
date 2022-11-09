@@ -1,7 +1,7 @@
 <template>
-  <div class="burger-btn" :class="{'burger-btn--active white-btn': check}">
+  <button class="burger-btn" :class="{'burger-btn--active white-btn': check}">
     <span class="burger-btn__line"></span>
-  </div>
+  </button>
 </template>
 <script>
 export default {

@@ -1,17 +1,19 @@
 <template>
   <Swiper class="my-slider" slidesPerView="auto" :pagination="{ clickable: true }" mousewheel navigation :loop="true">
-    <SwiperSlide v-for="slide in slideArr" :key="slide.id" >
+    <SwiperSlide v-for="slide in getSlideArr" :key="slide.id">
       <SlideComponent :slide="slide"></SlideComponent>
     </SwiperSlide>
-      <div class="swiper-pagination" slot="pagination"></div>
-      <div class="swiper-button-prev" slot="button-prev"></div>
-      <div class="swiper-button-next" slot="button-next"></div>
+    <div class="swiper-pagination" slot="pagination"></div>
+    <div class="swiper-button-prev" slot="button-prev"></div>
+    <div class="swiper-button-next" slot="button-next"></div>
   </Swiper>
 </template>
-<script>
+<script lang="ts">
 import { Pagination, Mousewheel, Navigation } from "swiper";
 import { SwiperCore, Swiper, SwiperSlide } from "swiper-vue2";
-import { SlideComponent } from "@/entities";
+import { mapGetters } from 'vuex';
+
+import { SlideComponent } from "../../entities";
 
 import "swiper/swiper-bundle.css";
 
@@ -19,12 +21,10 @@ SwiperCore.use([Pagination, Mousewheel, Navigation]);
 export default {
   data() {
     return {
-      slideArr: [
-        { id: 1, title: "Бесплатная парковка", descr: "Оставляйте машину на платных городских парковках и разрешенных местах, не нарушая ПДД, а также в аэропортах.", img: 'slider/jp-valery-1052513-unsplash.jpg', btnTheme: 'btn-green' },
-        { id: 2, title: "Страховка", descr: "Полная страховка страховка автомобиля", img: 'slider/jp-valery-1052513-unsplash (1).jpg', btnTheme: 'btn-blue' },
-        { id: 3, title: "Бензин", descr: "Полный бак на любой заправке города за наш счёт", img: 'slider/jp-valery-1052513-unsplash (2).jpg', btnTheme: 'btn-red' },
-        { id: 4, title: "Обслуживание", descr: "Автомобиль проходит еженедельное ТО", img: 'slider/jp-valery-1052513-unsplash (3).jpg', btnTheme: 'btn-purple' },]
     }
+  },
+  computed: {
+    ...mapGetters(["getSlideArr"])
   },
   components: {
     Swiper,

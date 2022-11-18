@@ -1,11 +1,17 @@
-import Vue from 'vue';
-import VueRouter from 'vue-router';
-import {routes} from '../../pages';
+import Vue from "vue";
+import VueRouter from "vue-router";
+
+import HomePage from '@/pages/home/HomePage.vue'
 
 Vue.use(VueRouter);
 
-export const router = new VueRouter({
-    mode: 'history',
-    routes,
-});
 
+const routes = [
+    {path: '/', component: HomePage},
+    // {path: '/:id', component: () => import('./task-details')}
+];
+
+export const router = new VueRouter({
+  mode: "history",
+  routes,
+});

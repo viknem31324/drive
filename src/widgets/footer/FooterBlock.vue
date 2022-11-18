@@ -15,3 +15,4 @@ export default defineComponent({
 
 });
 </script>
+<style lang="scss" src="./index.scss" />

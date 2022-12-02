@@ -6,15 +6,13 @@
   </div>
 </template>
 
-<script>
-import {defineComponent} from 'vue';
+<script lang="ts">
+import Vue from 'vue';
 
-export default defineComponent({
+export default Vue.extend({
   data() {
-    return {
-    }
+    return {};
   },
-  
 });
 </script>
-<style lang="scss" src="./index.scss" />
+<style lang="scss" src="./index.scss" scoped />

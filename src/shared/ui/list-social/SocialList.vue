@@ -8,17 +8,17 @@
   </ul>
 </template>
 <script lang="ts">
-import { defineComponent } from 'vue';
+import Vue from 'vue';
 import { mapGetters } from 'vuex';
 
-export default defineComponent({
+export default Vue.extend({
   data() {
     return {
-    }
+    };
   },
   computed: {
     ...mapGetters(["getSocialArr"]),
-  }
-})
+  },
+});
 </script>
-<style lang="scss" src="./index.scss" />
+<style lang="scss" src="./index.scss" scoped />

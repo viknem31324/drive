@@ -18,10 +18,10 @@ import SlideComponent from "@/entities/slide/SlideComponent.vue";
 import "swiper/swiper-bundle.css";
 
 SwiperCore.use([Pagination, Mousewheel, Navigation]);
+
 export default {
   data() {
-    return {
-    }
+    return {};
   },
   computed: {
     ...mapGetters(["getSlideArr"])
@@ -29,7 +29,7 @@ export default {
   components: {
     Swiper,
     SlideComponent,
-    SwiperSlide
+    SwiperSlide,
   },
   swiperOptions: {
     slidesPerView: "auto",
@@ -44,4 +44,4 @@ export default {
   },
 };
 </script>
-<style lang="scss" src="./index.scss" />
+<style lang="scss" src="./index.scss" scoped />

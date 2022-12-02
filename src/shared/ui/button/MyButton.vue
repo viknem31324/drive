@@ -5,12 +5,12 @@
 </template>
 
 <script lang="ts">
-import { defineComponent} from "vue";
+import Vue from 'vue';
 
-export default defineComponent({
+export default Vue.extend({
   data() {
     return {
-    }
+    };
   },
   props: {
     theme: {
@@ -32,4 +32,4 @@ export default defineComponent({
   },
 });
 </script>
-<style lang="scss" src="./index.scss" />
+<style lang="scss" src="./index.scss" scoped />

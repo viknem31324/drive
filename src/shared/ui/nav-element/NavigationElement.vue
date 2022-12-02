@@ -8,18 +8,16 @@
   </nav>
 </template>
 <script>
-import { defineComponent } from 'vue';
+import Vue from 'vue';
 import {mapGetters} from 'vuex';
 
-export default defineComponent({
+export default Vue.extend({
   data() {
-    return {
-    }
+    return {};
   },
   computed: {
     ...mapGetters(["getNavArr"]),
-  }
-
-})
+  },
+});
 </script>
-<style lang="scss" src="./index.scss" />
+<style lang="scss" src="./index.scss" scoped />

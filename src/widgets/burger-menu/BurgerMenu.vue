@@ -15,27 +15,27 @@
 </template>
 
 <script lang="ts">
+import Vue from 'vue';
 import BurgerButton from '@/shared/ui/burger-button/BurgerButton.vue';
 import NavigationElement from '@/shared/ui/nav-element/NavigationElement.vue';
 import SocialList from '@/shared/ui/list-social/SocialList.vue';
 
-export default {
+export default Vue.extend({
   data() {
     return {
       burgerCheck: false,
-    }
+    };
   },
   components: {
     BurgerButton,
     NavigationElement,
-    SocialList
+    SocialList,
   },
   methods: {
     dclick() {
       console.log(11111)
-    }
-  }
-
-}
+    },
+  },
+});
 </script>
-<style lang="scss" src="./index.scss" />
+<style lang="scss" src="./index.scss" scoped />

@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <BurgerMenu class="home__burger" />
+    <!-- <BurgerMenu class="home__burger" /> -->
     <div class="home__left">
       <HeaderBlock></HeaderBlock>
       <main class="home__content">
@@ -18,31 +18,31 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import Vue from "vue";
 
 import MyButton from "@/shared/ui/button/MyButton.vue";
-import BurgerMenu from "@/widgets/burger-menu/BurgerMenu.vue";
+// import BurgerMenu from "@/widgets/burger-menu/BurgerMenu.vue";
 import HeaderBlock from "@/widgets/header/HeaderBlock.vue";
 import FooterBlock from "@/widgets/footer/FooterBlock.vue";
 import MySlider from "@/widgets/slider/MySlider.vue";
 
-export default defineComponent({
+export default Vue.extend({
   data() {
     return {
-    }
+    };
   },
   components: {
     HeaderBlock,
     FooterBlock,
-    BurgerMenu,
+    // BurgerMenu,
     MySlider,
     MyButton,
   },
   methods: {
     overOrder(): void {
       console.log('click')
-    }
-  }
+    },
+  },
 });
 </script>
-<style lang="scss" src="./index.scss" />
+<style lang="scss" src="./index.scss" scoped />

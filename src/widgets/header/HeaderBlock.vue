@@ -8,17 +8,16 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import Vue from 'vue';
 import MyLogo from '@/shared/ui/logo/MyLogo.vue';
-export default defineComponent({
+
+export default Vue.extend({
   data() {
-    return {
-    }
+    return {};
   },
   components: {
     MyLogo
-  }
-
+  },
 });
 </script>
-<style lang="scss" src="./index.scss" />
+<style lang="scss" src="./index.scss" scoped />

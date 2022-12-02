@@ -4,17 +4,19 @@
   </button>
 </template>
 <script>
-export default {
+import Vue from 'vue';
+
+export default Vue.extend({
   data() {
     return {
-    }
+    };
   },
   props: {
     check: {
       type: Boolean,
       required: true
-    }
-  }
-}
+    },
+  },
+});
 </script>
-<style lang="scss" src="./index.scss" />
+<style lang="scss" src="./index.scss" scoped />

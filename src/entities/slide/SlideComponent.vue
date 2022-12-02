@@ -10,19 +10,20 @@
   </div>
 </template>
 
-<script>
-import { MyButton } from '@/shared';
+<script lang="ts">
+import Vue from 'vue';
+import MyButton from '@/shared/ui/button/MyButton.vue';
 
-export default {
+export default Vue.extend({
   data() {
     return {
-    }
+    };
   },
   props: {
     slide: {
       type: Object,
       required: true
-    }
+    },
   },
   components: {
     MyButton
@@ -30,8 +31,8 @@ export default {
   methods: {
     overOrder(){
       console.log(111111)
-    }
-  }
-}
+    },
+  },
+});
 </script>
-<style lang="scss" src="./index.scss" />
+<style lang="scss" src="./index.scss" scoped />

@@ -17,16 +17,16 @@
     font-weight: 600;
 }
 @font-face {
-    font-family: "Roboto-Bold";
-    src: url('@/shared/assets/fonts/Roboto-Bold.woff');
-    font-style: normal;
-    font-weight: 700;
-}
-@font-face {
     font-family: "Roboto-Light";
     src: url('@/shared/assets/fonts/Roboto-Light.woff');
     font-style: normal;
     font-weight: 300;
+}
+@font-face {
+    font-family: "Roboto-Regular";
+    src: url('@/shared/assets/fonts/Roboto-Regular.woff');
+    font-style: normal;
+    font-weight: 400;
 }
 @font-face {
     font-family: "Roboto-Medium";
@@ -35,12 +35,8 @@
     font-weight: 500;
 }
 @font-face {
-    font-family: "Roboto-Regular";
-    src: url('@/shared/assets/fonts/Roboto-Regular.woff');
+    font-family: "Roboto-Bold";
+    src: url('@/shared/assets/fonts/Roboto-Bold.woff');
     font-style: normal;
-    font-weight: 400;
+    font-weight: 700;
 }
-
-
-
-

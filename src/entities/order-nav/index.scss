@@ -1,0 +1,37 @@
+.order-nav {
+  height: 32px;
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+
+  &__list {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    column-gap: 38px;
+  }
+  &__item {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: -22px;
+      bottom: 4px;
+      width: 6px;
+      height: 8px;
+      background-image: url('@/shared/assets/img/order-nav/order-nav-arrow.svg');
+      background-repeat: no-repeat;
+    }
+  }
+  &__link {
+    font-family: "Roboto-Bold";
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--main-grey);
+
+    &:focus {
+      color: var(--main-accent);
+    }
+  }
+}

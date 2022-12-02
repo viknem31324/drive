@@ -1,0 +1,71 @@
+.progress-bar {
+  padding-left: 32px;
+
+  &__descr {
+    padding-top: 32px;
+    font-family: "Roboto-Medium";
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: right;
+    color: var(--main-black);
+  }
+
+  &__list {
+    padding-top: 26px;
+    padding-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+  }
+
+  &__item {
+    position: relative;
+    z-index: 400;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    font-family: "Roboto-Light";
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+    &::after {
+      content: '......................................................................................';
+      position: absolute;
+      left: 20px;
+      bottom: 0;
+      z-index: 400;
+    }
+  }
+
+  &__title {
+    position: relative;
+    z-index: 500;
+    padding-right: 5px;
+    color: var(--main-black);
+    background-color: #fff;
+  }
+
+  &__value {
+    position: relative;
+    z-index: 500;
+    max-width: 105px;
+    padding-left: 5px;
+    text-align: right;
+    color: var(--main-grey);
+    background-color: #fff;
+  }
+
+  &__price {
+    padding-bottom: 32px;
+    font-family: "Roboto-Medium";
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    color: var(--main-black);
+  }
+
+  &__btn {
+    width: 100%;
+  }
+}

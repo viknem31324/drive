@@ -2,17 +2,17 @@
   <div class="home">
     <!-- <BurgerMenu class="home__burger" /> -->
     <div class="home__left">
-      <HeaderBlock></HeaderBlock>
+      <HeaderBlock />
       <main class="home__content">
         <h1 class="home__title">Каршеринг <br><span>Need for drive</span></h1>
         <div class="home__descr">Поминутная аренда авто твоего города</div>
         <MyButton class="home__btn" :theme="'btn-green'" @click.native="overOrder()">Забронировать
         </MyButton>
       </main>
-      <FooterBlock></FooterBlock>
+      <FooterBlock />
     </div>
     <div class="home__right">
-      <MySlider></MySlider>
+      <MySlider />
     </div>
   </div>
 </template>
@@ -40,7 +40,7 @@ export default Vue.extend({
   },
   methods: {
     overOrder(): void {
-      console.log('click')
+      this.$router.push('/order');
     },
   },
 });

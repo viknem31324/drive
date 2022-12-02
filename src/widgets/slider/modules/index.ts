@@ -14,7 +14,7 @@ export default {
 
   },
   getters: {
-    getSlideArr(state) {
+    getSlideArr(state:any) {
       return state.slideArr;
     }
   }

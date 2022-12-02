@@ -1,9 +1,9 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 
-import sliders from '../../widgets/slider/modules';
-import nav from '../../shared/ui/nav-element/modules';
-import social from '../../shared/ui/list-social/modules';
+import slider from '../../widgets/slider/modules';
+import nav from '../ui/nav-element/modules';
+import social from '../ui/list-social/modules';
 
 Vue.use(Vuex);
 
@@ -12,7 +12,7 @@ export const store = new Vuex.Store({
         count: 0,
     },
     modules: {
-        sliders,
+        slider,
         nav,
         social
     }

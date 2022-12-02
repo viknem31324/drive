@@ -13,7 +13,7 @@ import { Pagination, Mousewheel, Navigation } from "swiper";
 import { SwiperCore, Swiper, SwiperSlide } from "swiper-vue2";
 import { mapGetters } from 'vuex';
 
-import { SlideComponent } from "../../entities";
+import SlideComponent from "@/entities/slide/SlideComponent.vue";
 
 import "swiper/swiper-bundle.css";
 

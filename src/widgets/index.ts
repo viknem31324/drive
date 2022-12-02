@@ -1,2 +1,5 @@
 import BurgerMenu from './burger-menu';
-export default BurgerMenu;
+import HeaderBlock from './header';
+import FooterBlock from './footer';
+import MySlider from './slider';
+export {BurgerMenu, HeaderBlock, FooterBlock, MySlider};

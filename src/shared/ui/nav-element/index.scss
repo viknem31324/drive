@@ -1,0 +1,32 @@
+.list-link {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: -25px;
+  padding-bottom: 45px;
+
+  &__item {
+    @include tablet {
+      font-size: 28px;
+      line-height: 33px;
+    }
+
+    @include mobile {
+      font-size: 22px;
+      line-height: 26px;
+    }
+
+    font-family: "Roboto-Medium";
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 38px;
+    color: var(--white);
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: var(--main-accent);
+    }
+  }
+}

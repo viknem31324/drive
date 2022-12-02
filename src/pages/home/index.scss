@@ -1,15 +1,97 @@
 .home {
   display: flex;
   width: 100%;
-  height: 100%;
+
+  &__burger {
+    @include mobile {
+      position: fixed;
+      left: 20px;
+      top: 0;
+    }
+  }
 
   &__left {
-    flex: 0 1 50%;
-    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 50%;
   }
-  
+
+  &__content {
+    @include desktop-min {
+      padding-left: 32px;
+    }
+
+    @include mobile {
+      padding-top: 37px;
+      padding-left: 0px;
+    }
+
+    padding-left: 61px;
+    flex: 1 0 auto;
+  }
+
+  &__title {
+    @include mobile {
+      padding-top: 0px;
+      padding-left: 16px;
+      line-height: 100%;
+      font-size: 32px;
+    }
+
+    padding-top: 168px;
+    font-family: "Roboto-Bold";
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 66px;
+    color: var(--main-black);
+
+    span {
+      @include mobile {
+        padding-top: 6px;
+      }
+
+      display: inline-block;
+      padding-top: 4px;
+      color: var(--main-accent);
+    }
+  }
+
+  &__descr {
+    @include mobile {
+      padding-top: 13px;
+      padding-left: 16px;
+      line-height: 21px;
+      font-size: 18px;
+    }
+
+    padding-top: 26px;
+    font-size: 26px;
+    line-height: 30px;
+    color: var(--main-grey);
+  }
+
+  &__btn {
+    @include mobile {
+      margin-top: 33px;
+      padding-left: 0px;
+      padding-right: 0px;
+      width: 100%;
+    }
+
+    padding-left: 60px;
+    padding-right: 59px;
+    margin-top: 60px;
+  }
+
   &__right {
+    @include desktop-min {
+      flex: 0 1 30%;
+    }
+
+    @include tablet {
+      display: none;
+    }
+
     flex: 0 1 50%;
-    border: 1px solid black;
   }
 }

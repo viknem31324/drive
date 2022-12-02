@@ -1,0 +1,47 @@
+.header {
+  @include mobile {
+    padding-top: 16px;
+    padding-right: 16px;
+    padding-left: 0px;
+    justify-content: end;
+    flex-wrap: wrap;
+  }
+
+  padding-top: 30px;
+  padding-left: 61px;
+  padding-right: 62px;
+  display: flex;
+  justify-content: space-between;
+
+  &__logo {
+    @include mobile {
+      padding-left: 50px;
+    }
+  }
+
+  .geo-location {
+    @include mobile {
+      padding-top: 11px;
+    }
+
+    position: relative;
+    padding-left: 29px;
+    padding-top: 8px;
+    font-family: 'Roboto-Regular';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--main-grey);
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 6px;
+      width: 26px;
+      height: 26px;
+      background-image: url('@/shared/assets/img/header/geolock.svg');
+      background-repeat: no-repeat;
+    }
+  }
+}

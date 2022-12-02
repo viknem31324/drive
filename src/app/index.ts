@@ -1,7 +1,8 @@
 import Vue from 'vue';
 import App from './App.vue';
-import {router, store} from './providers';
-import './index.scss';
+import {router}  from '../shared/router/router';
+import {store} from '../shared/store/store';
+import '@/shared/assets/styles/index.scss';
 
 export const app = new Vue({
     router,

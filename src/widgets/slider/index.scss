@@ -1,0 +1,53 @@
+.swiper-container {
+  @include desktop-min {
+    max-width: 410px;
+    margin: 0;
+  }
+
+  max-width: 688px;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  top: 0;
+  width: 64px;
+  height: 100%;
+  margin-top: 0;
+  background-repeat: no-repeat;
+  background-size: 50px 50px;
+
+  &:hover {
+    background-color: var(--main-accent);
+    opacity: 0.2;
+  }
+}
+
+.swiper-button-prev {
+  left: 0;
+  background-image: url("@/shared/assets/img/slider/arrow-left.svg");
+  background-position: 50%;
+}
+
+.swiper-button-next {
+  right: 0;
+  background-image: url("@/shared/assets/img/slider/arrow-right.svg");
+  background-position: 50%;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  content: '';
+  opacity: 1;
+}
+.swiper-pagination-bullet {
+  opacity: 1;
+  background: var(--white);
+}
+.swiper-pagination-bullet-active {
+  background: var(--main-accent);
+}
+.swiper-pagination {
+  z-index: 100;
+}

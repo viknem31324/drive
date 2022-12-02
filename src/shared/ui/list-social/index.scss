@@ -1,0 +1,36 @@
+.list-icon {
+  position: relative;
+  display: flex;
+
+  &__item {
+    position: absolute;
+    top: 0;
+
+    width: 32px;
+    height: 32px;
+
+    transition: width 0.4s ease-in-out, box-shadow 0.4s ease-in-out,
+      background-color 0.4s ease-in-out;
+
+    &:nth-child(1) {
+      left: 0;
+    }
+
+    &:nth-child(2) {
+      left: 48px;
+    }
+
+    &:nth-child(3) {
+      left: 96px;
+    }
+
+    &:hover {
+      width: 36px;
+      height: 36px;
+      background-color: var(--main-accent);
+      box-shadow: var(--main-accent) 0px 25px 55px,
+        var(--main-accent) 0px -12px 30px, var(--main-accent) 0px 4px 6px,
+        var(--main-accent) 0px 12px 13px, var(--main-accent) 0px -3px 5px;
+    }
+  }
+}

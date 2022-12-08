@@ -1,0 +1,22 @@
+.order-location {
+  display: flex;
+  flex-direction: column;
+  padding-top: 32px;
+  padding-left: 63px;
+
+  &__input {
+    display: inline-block;
+    max-width: 358px;
+    margin-bottom: 45px;
+  }
+
+  &__descr {
+    margin-bottom: 16px;
+  }
+
+  &__map {
+    width: 736px;
+    height: 352px;
+    border: 1px solid black;
+  }
+}

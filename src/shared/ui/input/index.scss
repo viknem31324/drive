@@ -1,0 +1,44 @@
+.custom-input {
+  position: relative;
+  display: flex;
+  justify-content: end;
+  
+
+  &__input {
+    flex: 0 1 224px;
+    margin-left: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-bottom: 1px solid var(--main-grey);
+  }
+
+  &__close {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    width: 8px;
+    height: 8px;
+    background-image: url('../../assets/img/custom-input/close.svg');
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+
+  &__list {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    z-index: 300;
+    width: 224px;
+    background-color: var(--white);
+    border: 1px solid var(--main-grey);
+  }
+
+  &__item {
+    cursor: pointer;
+
+    &:hover {
+      color: var(--white);
+      background-color: var(--main-grey);
+    }
+  }
+}

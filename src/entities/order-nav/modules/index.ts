@@ -7,10 +7,10 @@ export default {
   },
   state: {
     orderNavArr: [
-      {name: 'Местоположение', link: '#'},
-      {name: 'Модель', link: '#'},
-      {name: 'Дополнительно', link: '#'},
-      {name: 'Итого', link: '#'}
+      {name: 'Местоположение', link: '/order/location'},
+      {name: 'Модель', link: '/order/models'},
+      {name: 'Дополнительно', link: '/order/additionally'},
+      {name: 'Итого', link: '/order/total'}
     ],
 
   },

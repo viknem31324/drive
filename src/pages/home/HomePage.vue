@@ -40,7 +40,7 @@ export default Vue.extend({
   },
   methods: {
     overOrder(): void {
-      this.$router.push('/order');
+      this.$router.push('/order/location');
     },
   },
 });

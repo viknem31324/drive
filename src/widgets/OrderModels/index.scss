@@ -1,0 +1,24 @@
+.order-models {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    padding: 16px;
+    height: 224px;
+    flex: 0 1 369px;
+    border: 1px solid var(--main-light);
+    cursor: pointer;
+    // background-image: url('../../shared//assets//img/cars/image1.png');
+    background-repeat: no-repeat;
+
+    &:hover {
+      border: 1px solid var(--main-grey);
+    }
+
+    &:focus {
+      border: 1px solid var(--main-accent);
+    }
+  }
+}

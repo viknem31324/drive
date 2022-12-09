@@ -1,8 +1,8 @@
 <template>
   <div class="order-location">
     <div class="order-location__input">
-      <MyInput label="Город" type="text" :value="getCity" placeholder="Начните вводить город" @input="setCity($event)" :list="list" />
-      <MyInput label="Пункт выдачи" type="text" :value="getPoint" placeholder="Начните вводить пункт..." @input="setPoint($event)" :list="list" />
+      <MyInput label="Город" type="text" :value="city" placeholder="Начните вводить город" @input="[(city = $event)]" :list="list" />
+      <MyInput label="Пункт выдачи" type="text" :value="point" placeholder="Начните вводить пункт..." @input="[(point = $event)]" :list="list" />
     </div>
     <div class="order-location__block">
       <div class="order-location__descr">Выбрать на карте:</div>
@@ -19,17 +19,32 @@ import {CITY_LIST} from '../../shared/mocks/list/cityList';
 export default Vue.extend({
   data() {
     return {
+      city: '',
+      point: '',
       list: CITY_LIST,
     };
   },
   components: {
     MyInput,
   },
+  created() {
+    this.setCityPoint(' ');
+    this.setModel('');
+  },
+  beforeRouteLeave(to, from, next) {
+    this.setCityPoint(this.city + ' ' + this.point);
+    console.log(1111111)
+    if(this.getCityPoint === ' ') {
+      next(false);
+    }else {
+      next();
+    }
+  },
   methods: {
-    ...mapMutations(['setCity', 'setPoint']),
+    ...mapMutations(['setCityPoint', 'setModel']),
   },
   computed: {
-    ...mapGetters(['getCity', 'getPoint']),
+    ...mapGetters(['getCityPoint']),
   }
 });
 </script>

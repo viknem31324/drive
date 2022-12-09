@@ -19,6 +19,7 @@
 
 <script>
 import Vue from 'vue';
+// import { mapActions } from 'vuex';
 
 export default Vue.extend({
   name: 'MyInput',
@@ -28,6 +29,7 @@ export default Vue.extend({
     };
   },
   methods: {
+    // ...mapActions(['createProgress']),
     searchHandler(value) {
       return this.list.filter(item => item.name.toLowerCase().includes(value.toLowerCase()));
     },
@@ -66,6 +68,4 @@ export default Vue.extend({
   },
 });
 </script>
-
-
 <style lang="scss" src="./index.scss" scoped />

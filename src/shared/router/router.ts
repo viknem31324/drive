@@ -1,5 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
+// import { store } from "../store/store";
+import order from '../../pages/order/modules';
 
 import HomePage from '@/pages/home/HomePage.vue';
 import OrderPage from '@/pages/order/OrderPage.vue';
@@ -21,20 +23,45 @@ const routes = [
       component: OrderPage,
       children: [
         {
-        path: 'location',
-        component: OrderLocation,
+          name: 'location',
+          path: 'location',
+          component: OrderLocation,
         },
         {
+          name: 'models',
           path: 'models',
           component: OrderModels,
+          // beforeEnter(to:any, from:any, next:any) {
+          //   if(order.state.cityPoint === ''){
+          //     next(false);
+          //   }else {
+          //     next();
+          //   }
+          // }
         },
         {
+          name: 'additionally',
           path: 'additionally',
           component: OrderAdditionally,
+          // beforeEnter(to:any, from:any, next:any) {
+          //   if(order.state.cityPoint === '' || order.state.model === ''){
+          //     next(false);
+          //   }else {
+          //     next();
+          //   }
+          // }
         },
         {
+          name: 'total',
           path: 'total',
           component: OrderTotal,
+          // beforeEnter(to:any, from:any, next:any) {
+          //   if(order.state.cityPoint === '' || order.state.model === '' && order.state.color === '' && order.state.order === '' && order.state.rate === '' && order.state.tank === ''){
+          //     next(false);
+          //   }else {
+          //     next();
+          //   }
+          // }
         },
       ],
     },

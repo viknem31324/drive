@@ -18,6 +18,10 @@
   &:disabled {
     background: var(--main-light);
     color: var(--white);
+    &:hover {
+      background: var(--main-light);
+      color: var(--white);
+    }
   }
 }
 

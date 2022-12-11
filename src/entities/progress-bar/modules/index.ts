@@ -1,9 +1,14 @@
 export default {
   actions: {},
-  mutations: {},
+  mutations: {
+    setConfirmBtn(state:any, value: Boolean) {
+      state.confirmBtn = value;
+    },
+  },
   state: {
     minPrice: 8000,
     maxPrice: 12000,
+    confirmBtn: true,
     progressBar: [
       { title: "Пункт выдaчи", value: "" },
       { title: "Модель", value: "Hyndai, i30 N" },
@@ -14,6 +19,9 @@ export default {
     ],
   },
   getters: {
+    getConfirmBtn(state:any) {
+      return state.confirmBtn;
+    },
     getPrice(state:any) {
       return 'от ' + state.minPrice + ' до ' + state.maxPrice + ' ₽';
     },

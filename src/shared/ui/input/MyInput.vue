@@ -16,10 +16,10 @@
     </ul>
   </label>
 </template>
-
+ 
 <script>
 import Vue from 'vue';
-// import { mapActions } from 'vuex';
+import { mapGetters, mapMutations } from 'vuex';
 
 export default Vue.extend({
   name: 'MyInput',
@@ -29,17 +29,21 @@ export default Vue.extend({
     };
   },
   methods: {
-    // ...mapActions(['createProgress']),
+    ...mapMutations(['setConfirmBtn']),
     searchHandler(value) {
       return this.list.filter(item => item.name.toLowerCase().includes(value.toLowerCase()));
     },
     onBlur() {
       setTimeout(() => {
+        if(this.getCityPoint !== '') {
+          this.setConfirmBtn(false);
+        }
         this.focused = false;
-      }, 80);
+      }, 300);
     },
   },
   computed: {
+    ...mapGetters(['getCityPoint']),
     name() {
       return this.label.toLowerCase();
     },
@@ -64,7 +68,7 @@ export default Vue.extend({
     placeholder: {
       type: String,
       required: false,
-    }
+    },
   },
 });
 </script>

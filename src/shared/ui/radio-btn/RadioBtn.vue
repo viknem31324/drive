@@ -1,10 +1,11 @@
 <template>
-  <label for="btn" >
+  <label :for="text" >
     <input
       type="radio"
-      name="btn"
-      class="check-list__radiobtn"
-      v-bind:class="{}"
+      name="radio"
+      :id="text"
+      :value="text"
+      @change="$emit('input', text)"
     />
       {{ text }}
     </label>
@@ -15,8 +16,9 @@ import Vue from 'vue';
 export default Vue.extend({
   props: {
     text: {
-      type: Number,
-    }
+      type: String,
+      required: true,
+    },
   },
 });
 </script>

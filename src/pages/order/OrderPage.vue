@@ -17,11 +17,16 @@ import Vue from 'vue';
 import HeaderBlock from "@/widgets/header/HeaderBlock.vue";
 import ProgressBar from "@/entities/progress-bar/ProgressBar.vue";
 import OrderNav from "@/entities/order-nav/OrderNav.vue";
+import { mapMutations } from 'vuex';
 
 export default Vue.extend({
   updated() {
+    this.setConfirmBtn(true);
     console.log(this.getNameBtn)
     
+  },
+  methods: {
+    ...mapMutations(['setConfirmBtn']),
   },
   computed: {
     getNameBtn() {

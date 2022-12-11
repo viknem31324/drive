@@ -8,7 +8,7 @@
       </li>
     </ul>
     <div class="progress-bar__price">Цена: {{ getPrice }} </div>
-    <MyButton class="progress-bar__btn" :theme="'btn-green'" :disabled="disabled" @click.native="confirmProgress()">{{ btn }}</MyButton>
+    <MyButton class="progress-bar__btn" :theme="'btn-green'" :disabled="getConfirmBtn" @click.native="confirmProgress()">{{ btn }}</MyButton>
   </div>
 </template>
 <script>
@@ -16,11 +16,11 @@ import Vue from 'vue';
 import MyButton from "@/shared/ui/button/MyButton.vue";
 import { mapGetters, mapMutations } from 'vuex';
 // import { PROGRESS_BAR_LIST } from '../../shared/mocks/list/progressBarList';
-
+ 
 export default Vue.extend({
   data() {
     return {
-      disabled: true,
+      // disabled: this.getConfirmBtn,
       // titleList: PROGRESS_BAR_LIST,
     };
   },
@@ -33,11 +33,20 @@ export default Vue.extend({
   methods: {
     ...mapMutations(['setProgress']),
     confirmProgress() {
-      this.$router.push({name: 'models'})
+      console.log(this.$route.fullPath)
+      if(this.$route.fullPath === '/order/location'){
+        this.$router.push({name: 'models'});
+      } else if (this.$route.fullPath === '/order/models') {
+        this.$router.push({name: 'additionally'});
+      } else if (this.$route.fullPath === '/order/additionally') {
+        this.$router.push({name: 'total'});
+      } else if (this.$route.fullPath === '/order/total') {
+        console.log('подтверждение');
+      }
     },
   },
   computed: {
-    ...mapGetters(['getPrice', 'getProgressList']),
+    ...mapGetters(['getPrice', 'getProgressList', 'getConfirmBtn']),
   },
   components: {
     MyButton,

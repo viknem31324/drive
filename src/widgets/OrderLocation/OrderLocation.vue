@@ -27,21 +27,24 @@ export default Vue.extend({
   components: {
     MyInput,
   },
+  updated() {
+    this.setCityPoint(this.city + ' ' + this.point);
+  },
   created() {
+    // this.setConfirmBtn(true);
     this.setCityPoint(' ');
     this.setModel('');
   },
   beforeRouteLeave(to, from, next) {
-    this.setCityPoint(this.city + ' ' + this.point);
-    console.log(1111111)
     if(this.getCityPoint === ' ') {
       next(false);
     }else {
+      this.setConfirmBtn(true);
       next();
     }
   },
   methods: {
-    ...mapMutations(['setCityPoint', 'setModel']),
+    ...mapMutations(['setCityPoint', 'setModel', 'setConfirmBtn']),
   },
   computed: {
     ...mapGetters(['getCityPoint']),

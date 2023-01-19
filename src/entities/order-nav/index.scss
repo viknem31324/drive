@@ -30,8 +30,11 @@
     line-height: 16px;
     color: var(--main-grey);
 
-    &:focus {
+    &--active {
       color: var(--main-accent);
     }
+    // &:focus {
+    //   color: var(--main-accent);
+    // }
   }
 }

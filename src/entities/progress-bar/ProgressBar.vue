@@ -45,6 +45,9 @@ export default Vue.extend({
       }
     },
   },
+  updated() {
+    console.log(this.getConfirmBtn);
+  },
   computed: {
     ...mapGetters(['getPrice', 'getProgressList', 'getConfirmBtn']),
   },

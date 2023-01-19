@@ -34,11 +34,11 @@ export default Vue.extend({
         case '/order/location':
           return 'Выбрать модель';
         case '/order/models':
-          return 'Модель';  
+          return 'Дополнительно';  
         case '/order/additionally':
-          return 'Дополнительно';
-        case '/order/total':
           return 'Итого';
+        case '/order/total':
+          return 'Заказать';
       }
       return '';
     },

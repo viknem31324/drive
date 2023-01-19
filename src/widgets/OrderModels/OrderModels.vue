@@ -4,9 +4,10 @@
     <ul class="order-models__list">
       <li
         class="order-models__item car"
-        v-for="item in searchCategori(cars)"
+        v-for="(item, index) in searchCategori(cars)"
         :key="item.model"
-        @click="onModel(item.model)"
+        :class="getActiveClass(index)"
+        @click="onModel(item)"
       >
         <div class="car__model">{{ item.model }}</div>
         <div class="car__price">{{ item.price }}</div>
@@ -26,10 +27,12 @@ export default Vue.extend({
     return {
       model: "",
       cars: CAR_LIST,
+      activeId: null,
     };
   },
   created() {
-    // this.setConfirmBtn(true);
+    this.setConfirmBtn(true);
+    console.log(this.getConfirmBtn)
     console.log(111111111111111);
     this.setModel("");
   },
@@ -61,16 +64,21 @@ export default Vue.extend({
       }
     },
     onModel(value) {
-      this.model = value;
+      this.model = value.model;
+      this.activeId = value.id;
       this.setModel(this.model);
       if (this.getModel !== "") {
-        this.setConfirmBtn(false);
+        console.log(888888)
+        // this.setConfirmBtn(false);
       }
+    },
+    getActiveClass(index) {
+      return this.activeId === index ? 'order-models__item--active' : ''
     },
     ...mapMutations(["setModel", "setConfirmBtn"]),
   },
   computed: {
-    ...mapGetters(["getModel", "getActiveCategori"]),
+    ...mapGetters(["getModel", "getActiveCategori", "getConfirmBtn"]),
   },
   components: {
     CheckList,

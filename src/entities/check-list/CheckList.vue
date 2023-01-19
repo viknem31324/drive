@@ -3,7 +3,7 @@
     <li v-for="(item, inx) in getCategoriRadioBtn" :key="inx">
       <RadioBtn :text="item.text" :value="item.text" v-model="categori" />
     </li>
-  </ul>
+  </ul> 
 </template>
 <script>
 import Vue from "vue";
@@ -17,7 +17,6 @@ export default Vue.extend({
     };
   },
   updated() {
-    console.log(1111111111)
     this.setActiveCategori(this.categori);
   },
   methods: {

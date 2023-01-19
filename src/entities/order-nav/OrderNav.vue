@@ -2,7 +2,9 @@
   <nav class="order-nav">
     <ul class="order-nav__list container">
       <li class="order-nav__item" v-for="item in getOrderNavArr" :key="item.name">
-        <router-link class="order-nav__link" :to="item.link">{{ item.name }}</router-link>
+        <router-link class="order-nav__link"
+          :to="item.link"
+          :class="(item.link === $route.fullPath) ? 'order-nav__link--active': ''">{{ item.name }}</router-link>
       </li>
     </ul>
   </nav>

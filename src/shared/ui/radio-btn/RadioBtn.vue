@@ -1,5 +1,5 @@
 <template>
-  <label :for="text" >
+  <label :for="text" class="radio-btn" >
     <input
       type="radio"
       name="radio"
